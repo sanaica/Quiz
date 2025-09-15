@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+.quiz-container {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+h1, h2 {
+    color: #2c3e50;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+select, input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 15px 25px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    width: 100%;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+#quiz-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #555;
+}
+
+#options-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.option-btn {
+    background-color: #ecf0f1;
+    color: #2c3e50;
+    border: 2px solid #bdc3c7;
+    text-align: left;
+    width: 100%;
+}
+.option-btn:hover {
+    background-color: #e0e6e8;
+}
+
+.option-btn.correct {
+    background-color: #2ecc71;
+    border-color: #27ae60;
+    color: white;
+}
+
+.option-btn.wrong {
+    background-color: #e74c3c;
+    border-color: #c0392b;
+    color: white;
+}
+
+.option-btn:disabled {
+    cursor: not-allowed;
+}
+
+#feedback {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    height: 30px;
+}
+
+#feedback.correct { color: #2ecc71; }
+#feedback.wrong { color: #e74c3c; }
+
+
+#play-again-btn {
+    background-color: #1abc9c;
+}
+#play-again-btn:hover {
+    background-color: #16a085;
+}
+
+.hidden {
+    display: none;
+}
