@@ -22,7 +22,7 @@ def generate_quiz_questions(disaster_type: str, standard: str, age: int):
     (This is the same function from our previous script)
     """
     try:
-        model = genai.GenerativeModel('gemini-pro')
+        model = genai.GenerativeModel('gemini-1.5-flash')
         
         prompt = f"""
         You are a helpful quiz generation assistant. Your task is to create a quiz on disaster management.
