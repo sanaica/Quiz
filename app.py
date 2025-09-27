@@ -12,6 +12,19 @@ load_dotenv()
 # Configure the Gemini API client
 genai.configure(api_key=os.environ.get("GEMINI_API_KEY"))
 
+# --- Start of your /generate-quiz function ---
+api_key_from_env = os.getenv("GEMINI_API_KEY")
+print(f"--- DEBUG: Trying to use API Key: {api_key_from_env} ---")
+
+@app.route('/generate-quiz', methods=['POST'])
+def generate_quiz():
+    # ADD THESE TWO LINES FOR DEBUGGING
+    api_key_from_env = os.getenv("GEMINI_API_KEY")
+    print(f"--- DEBUG: Trying to use API Key: {api_key_from_env} ---")
+
+    # ... the rest of your function code ...
+    # ... like getting data, calling genai.configure, etc. ...
+
 # Initialize Flask app
 app = Flask(__name__)
 CORS(app)  # Enable Cross-Origin Resource Sharing
